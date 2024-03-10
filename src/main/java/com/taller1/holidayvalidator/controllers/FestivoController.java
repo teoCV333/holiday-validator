@@ -22,8 +22,12 @@ public class FestivoController {
     }
 
     @GetMapping("/verificar/{year}/{month}/{day}")
-    public String getMethodName(@PathVariable Integer year, @PathVariable Integer month, @PathVariable Integer day) {
-        return this.festivoService.validate(year, month, day);
+    public String validate(
+        @PathVariable Integer year, 
+        @PathVariable Integer month, 
+        @PathVariable Integer day
+        ) {
+        return festivoService.validate(year, month, day);
     }
 
     @GetMapping("/{year}")

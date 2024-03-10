@@ -22,7 +22,6 @@ public class FestivoService implements IFestivoService {
 
     @Override
     public String validate(Integer year, Integer month, Integer day) {
-        String dateString = year + "-" + month + "-" + day;
         if (!isValid(year, month, day)) {
             return "Fecha no valida";
         }
